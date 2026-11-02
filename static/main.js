@@ -17,6 +17,13 @@
     gutter.scrollTop = editor.scrollTop;
   }
 
+  // Prefill from URL, e.g. ?code=%23%20Write%20your%20code%20here
+  const params = new URLSearchParams(window.location.search);
+  const starter = params.get('code') ?? params.get('starter');
+  if(starter !== null){
+    editor.value = starter.replace(/\\n/g, '\n');
+  }
+
   editor.addEventListener('input', updateLineNumbers);
   editor.addEventListener('scroll', syncGutterScroll);
   updateLineNumbers();

@@ -9,3 +9,5 @@ The textbox should include the following:
 - no syntax highlighting
 - line numbers on the left side
 There should also be a "Copy Code" button that selects all the code in the textbox and copies it to the clipboard to make pasting it into the LMS easy.
+
+Optional: prefill the textbox with starter code or comments via the URL, e.g. `?code=%23%20Write%20a%20function` (`starter` also works). Use URL-encoded text; a literal `\n` becomes a newline.
